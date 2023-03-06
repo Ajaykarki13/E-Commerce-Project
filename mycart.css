@@ -1,0 +1,59 @@
+div a{
+  text-decoration: none;
+}
+body{
+  background-color: whitesmoke !important;
+}
+.products_wrapper
+{
+    display:grid;
+    grid-template-columns:auto;
+    row-gap: 10px;
+}
+
+main .products_wrapper .item {
+    border: 1px solid black;
+    width: 25%;
+    margin-left: 4rem;
+  }
+  
+  main .products_wrapper .item img {
+    max-width: 100%;
+    object-fit: fill;
+    height:15vw;
+  }
+  
+  main .products_wrapper .item .row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  main .products_wrapper .item .info {
+    padding: 1rem;
+  }
+  
+  main .products_wrapper .item button {
+    width: 100%;
+    border-radius: none;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  aside
+  {
+    background-color: black;
+    color:white;
+    height:80%;
+    width:30%;
+    position:fixed;
+    margin-left:50rem;
+  }
+  aside button{
+    padding:10px;
+    margin-left: 20px;
+  }

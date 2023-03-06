@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="E-commerce application" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
+
+    <link rel="stylesheet" href="./mycart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>MeShop</title>
+</head>
+
+<main>
+    <nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div> <a class="navbar-brand" href="#">Me Shop.</a></div>
+            <div class="d-flex gap-5 justify-content-evenly">
+                <a href="./index.html">Home </a>
+                <a href="./shop.html">Shop </a>
+                
+            </div>
+
+    </nav><br><br>
+    <h1 style="text-align: center">My Cart</h1> <br /><br>
+
+    <main>
+        
+        <aside>
+            <h2>Checkout List</h2>
+                <ul class="checkout"> </ul>
+                <p id="total"> </p>
+                <button id="rzp">Checkout</button>
+        </aside>
+    <div class="products_wrapper" id="display">
+      
+    </div>
+</main>
+<script src="./mycart.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+</html>

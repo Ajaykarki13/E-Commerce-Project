@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="E-commerce application" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
+
+    <link rel="stylesheet" href="./shop.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>MeShop</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div> <a class="navbar-brand" href="#">Me Shop.</a></div>
+            <div class="d-flex gap-5 justify-content-evenly">
+                <a href="./index.html">Home </a>
+                <a href="./login.html">Login </a>
+                <a href="./signup.html">Signup </a>
+                <a href="./mycart.html">MyCart </a>
+                
+            </div>
+
+    </nav><br><br>
+
+    <main>
+        <aside>
+         
+          <section>
+            <title>Rating</title>
+            <input
+              type="range"
+              id="range"
+              min="0"
+              max="5"
+              value="0"
+              list="values"
+            />
+            <datalist id="values">
+              <option value="0" label="0"></option>
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="5" label="5"></option>
+            </datalist>
+          </section>
+          <section>
+            <title>Price Range</title>
+            <ul>
+              <li>
+                <input class="check"id="0-25" type="checkbox" name="prange" />
+                <label for="0-25">₹0 to ₹25</label>
+              </li>
+              <li>
+                <input class="check"id="25-50" type="checkbox" name="prange" />
+                <label for="25-50">₹25 to ₹50</label>
+              </li>
+              <li>
+                <input class="check"id="50-100" type="checkbox" name="prange" />
+                <label for="50-100">₹50 to ₹100</label>
+              </li>
+              <li>
+                <input class="check"id="100on" type="checkbox" name="prange" />
+                <label for="100on">₹100 above</label>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      
+        <main-content>
+          <input id="search"type="text" placeholder="Search product" /><br><br>
+          <button onclick="displaySearch()" class="filter">Search</button>
+          <div class="filters">
+          <button onclick="displayAll()"class="filter btn1" style="background-color:white;">All</button>
+          <button onclick="displayMen()" class="filter btn2" style="background-color:white;">Mens</button>
+           <button onclick="displayWomen()" class="filter btn3" style="background-color:white;">Womens</button>
+           <button onclick="displayJewel()"  class="filter btn4" style="background-color:white;">Jewellery</button>
+           <button onclick="displayElectric()" class="filter btn5" style="background-color:white;">Electronics</button>
+          </div>
+<br><br>
+<section class="products">
+  <div class="products_wrapper" id="display">
+      
+  </div>
+</section>
+ </main-content>
+      </main>
+
+        </main-content>
+      </main>
+<script src="./shop.js"></script>
+</body>
+</html>

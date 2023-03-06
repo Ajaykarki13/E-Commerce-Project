@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="E-commerce application" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>MeShop</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div> <a class="navbar-brand" href="#">Me Shop.</a></div>
+            <div class="d-flex gap-5 justify-content-evenly">
+                <a href="./index.html">Home </a>
+                <a href="./login.html">Login </a>
+                <a href="./signup.html">Signup </a>
+                <a href="">MyCart </a>
+            </div>
+
+    </nav><br><br>
+    
+    <div class="container d-flex ">
+        <div class="title">
+            <h1>Me Shop.</h1><br>
+            <h2>Your first shop...</h2><br><br>
+            <input type="button" value="LOGIN" onclick="loginPage()">
+            <input type="button" value="SIGNUP" onclick="signupPage()">
+        </div>
+
+        <div class="image">
+            <img src="./landingPagePic.png" alt="shopimg">
+        </div>
+    </div>
+
+   <script>
+    function loginPage()
+    {
+        window.location.href="./login.html"
+    }
+    function signupPage()
+    {
+        window.location.href="./signup.html"
+    }
+   </script>
+   <script>//if user exists
+
+    if(localStorage.getItem("newdata")!==null)
+    {
+      const logdinuser = JSON.parse(localStorage.getItem("newdata"));
+     // window.location.href="./shop.html"
+    }</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

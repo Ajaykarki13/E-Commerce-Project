@@ -1,0 +1,38 @@
+
+div a{
+    text-decoration: none;;
+}
+div >h1
+{
+    
+    animation:float 5s ease-in-out infinite;
+    font-size: 75px;
+    font-weight: 500;
+    font-style: italic;
+    padding-top: 30px;
+   
+}
+@keyframes float {
+    0%{transform:translate(0px)}
+    50%{transform:translate(15px)}
+    100%{transform:translate(0px)}
+    }
+
+   div> h2{
+    font-size: 40px;
+    font-weight: 300;
+    font-style: italic;
+    }
+
+   img{
+    width:800px;
+   }
+   div input{
+   
+    padding:10px;
+    margin-left: 10px !important;
+    border-radius: 20px !important;
+}
+   body{
+    background-color: aliceblue !important;
+   }
