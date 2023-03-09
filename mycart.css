@@ -3,12 +3,19 @@ div a{
 }
 body{
   background-color: whitesmoke !important;
+
+}
+main{
+  display:flex;
+  flex-direction: column-reverse;
+  flex-flow: column;
 }
 .products_wrapper
 {
-    display:grid;
-    grid-template-columns:auto;
+    display:flex;
+    flex-direction: column;
     row-gap: 10px;
+    margin-top: -15rem;
 }
 
 main .products_wrapper .item {
@@ -46,14 +53,15 @@ main .products_wrapper .item {
 
   aside
   {
-    background-color: black;
+    background-color:black;
     color:white;
-    height:80%;
-    width:30%;
-    position:fixed;
-    margin-left:50rem;
+    margin-left:40rem;
+    height:fit-content;
+    width:40%;
+    padding:20px;
+
   }
   aside button{
-    padding:10px;
+    padding:5px;
     margin-left: 20px;
   }
