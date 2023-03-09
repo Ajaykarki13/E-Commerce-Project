@@ -31,7 +31,7 @@ let form = document.querySelector(".login");
         currentUser.push(newobj);
         console.log(currentUser);
         localStorage.setItem("newdata", JSON.stringify(currentUser));
-        window.location.href = "./shop.html";
+        window.location.href = "../shop/shop.html";
       }
       else{alert('wrong credentials') ;}
     }

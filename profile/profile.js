@@ -54,5 +54,5 @@ localStorage.setItem("userinfo", JSON.stringify(allUsersExceptCurrent));
       window.localStorage.removeItem("newdata");
       // window.localStorage.removeItem("userinfo");
       // window.localStorage.clear();
-      window.location.href = "./index.html";
+      window.location.href = "../index.html";
     }

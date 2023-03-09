@@ -22,7 +22,10 @@ window.addEventListener("load", () => {
     }
   }
   dataFetch();
+
+
   let dataa = JSON.parse(localStorage.getItem("all"))
+  
   loadData(dataa);
 })
 //cards  display function

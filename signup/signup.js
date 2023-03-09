@@ -1,4 +1,4 @@
-//let btn1 = document.querySelector("#signup");
+
 let form = document.querySelector(".signup");
 let users = [];
 let name = document.querySelector("#name");
@@ -30,7 +30,7 @@ function validateForm(e) {
       return x.Email === email.value;
     });
     if (checkuser.length == 0) {
-      //if (users.filter((x) => x.Email == email.value).length==0) {
+     
       users.push(data);
       console.log(users);
     } else {
@@ -44,5 +44,5 @@ function validateForm(e) {
   }
 
   localStorage.setItem("userinfo", JSON.stringify(users));
-  window.location.href = "./login.html";
+  window.location.href = "../login/login.html";
 }

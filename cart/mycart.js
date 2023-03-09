@@ -58,7 +58,7 @@ document.querySelector("#rzp").onclick = function (e)
         "https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg",
         handler: function () {
             // Redirect the user to the shop.html page after the payment is completed
-            window.location.href = "./shop.html";
+            window.location.href = "../shop/shop.html";
           },
     };
 
