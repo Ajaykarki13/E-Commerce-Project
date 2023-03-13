@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
             <div> <a class="navbar-brand" href="#">Me Shop.</a></div>
@@ -37,41 +38,42 @@
             <input
               type="range"
               id="range"
-              min="0"
+              min="1"
               max="5"
-              value="0"
+              value="1"
               list="values"
             />
             <datalist id="values">
-              <option value="0" label="0"></option>
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
+              <option value="1" label="1"></option>
+              <option value="2" label="2"></option>
+              <option value="3" label="3"></option>
+              <option value="4" label="4"></option>
               <option value="5" label="5"></option>
             </datalist>
           </section>
+          
           <section>
             <title>Price Range</title>
             <ul>
-              <li>
-                <input class="check"id="0-25" type="checkbox" name="prange" />
+              <li> 
+                <input class="check"  value='25' type="checkbox"  />
                 <label for="0-25">₹0 to ₹25</label>
               </li>
               <li>
-                <input class="check"id="25-50" type="checkbox" name="prange" />
-                <label for="25-50">₹25 to ₹50</label>
+                <input class="check"   value='50' type="checkbox"  />
+                <label for="25-50">upto ₹50</label>
               </li>
               <li>
-                <input class="check"id="50-100" type="checkbox" name="prange" />
-                <label for="50-100">₹50 to ₹100</label>
+                <input class="check" value='100' type="checkbox"  />
+                <label for="50-100">upto ₹100</label>
               </li>
               <li>
-                <input class="check"id="100on" type="checkbox" name="prange" />
+                <input class="check"   value='101' type="checkbox"  />
                 <label for="100on">₹100 above</label>
               </li>
             </ul>
           </section>
+
         </aside>
       
         <main-content>
@@ -93,8 +95,6 @@
  </main-content>
       </main>
 
-        </main-content>
-      </main>
 <script src="./shop.js"></script>
 </body>
 </html>

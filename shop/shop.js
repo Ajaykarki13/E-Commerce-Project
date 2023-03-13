@@ -28,10 +28,11 @@ window.addEventListener("load", () => {
   
   loadData(dataa);
 })
+
 //cards  display function
 
 function loadData(products) {
-  let wrapper = document.querySelector(".products_wrapper")
+ 
   wrapper.innerHTML = '';
   products.map((item) => {
 
@@ -54,6 +55,7 @@ function loadData(products) {
 `                              })
 
 }
+
 //filtering according to filter buttons
 
 function displayAll() {
@@ -88,7 +90,97 @@ function displaySearch() {
   loadData(filtered);
 }
 
-// add to cart
+
+
+//------------------------///--------------------------------
+
+
+
+//FILTER USING CHECKBOX..........................................
+
+let products = JSON.parse(localStorage.getItem("all"))
+
+let checkbox = document.querySelectorAll(".check")
+
+let filterValues = []
+// Use Array.forEach to add an event listener to each checkbox.
+checkbox.forEach( (check)=> {
+  check.addEventListener('change', ()=> {
+    filterValues  = 
+      Array.from(checkbox) // Convert checkboxes to an array to use filter and map.
+      .filter(i => i.checked) // Use Array.filter to remove unchecked checkboxes.
+      .map(i => i.value) // Use Array.map to extract only the checkbox values from the array of objects.
+      
+    console.log(filterValues)
+ 
+for(let i=0;i<filterValues.length;i++)
+{
+  if(filterValues[i]<=25)
+  {
+    filter1 = products.filter((x)=>{return x.price<=25})
+    loadData(filter1)
+  }
+   
+          else if(filterValues[i]<=50 && filterValues[i]>=25)
+          {
+            filter2 = products.filter((x)=>{return x.price<=50 })
+            loadData(filter2)
+          }
+          else if(filterValues[i]<=100 && filterValues[i]>=50)
+          {
+            filter3 = products.filter((x)=>{return  x.price<=100})
+            loadData(filter3)
+          }
+          else if(filterValues[i]>=101)
+          {
+             filter4 = products.filter((x)=>{return x.price>=100})
+            loadData(filter4)
+          }
+        
+        }
+
+      })
+    });
+
+//----------------//------------------//------------------//--------------------//
+
+//FILTER USING RATING
+
+ var rangeInput = document.getElementById("range");
+ 
+rangeInput.addEventListener("input", function() {
+
+  let products = JSON.parse(localStorage.getItem("all"))
+var value = rangeInput.value;
+
+ if(value==2)
+ {
+  filt = products.filter((x)=>{return x.rating.rate<=2})
+  
+  loadData(filt)
+ }
+
+ else if(value==3)
+ {
+  filt = products.filter((x)=>{return x.rating.rate<=3 && x.rating.rate>2})
+ // console.log(filt)
+  loadData(filt)
+ }
+ else if(value==4)
+ {
+  filt = products.filter((x)=>{return x.rating.rate<=4 && x.rating.rate>3})
+
+  loadData(filt)
+ }
+ else if(value==5)
+ {
+  filt = products.filter((x)=>{return x.rating.rate<=5 && x.rating.rate>4})
+  loadData(filt)
+ }
+});
+
+
+// add to cart //................................
 
 const cart = JSON.parse(localStorage.getItem('cart')) || [] ;  //creating cart array to store the added to cart product to display them on the cart page
    
@@ -109,25 +201,3 @@ wrapper.addEventListener('click', (event) => {
 
   }
 });
-/*
-let checkboxes = document.querySelectorAll(".check")
-let filterValues = []
-
-checkboxes.forEach((c) => { 
-   c.addEventListener("change", (e) => {     //adding value of the checked button in an array on chagne in checkbox
-    if (e.target.checked) {
-      let products = JSON.parse(localStorage.getItem("all"))
-      filter
-      let value = filter.value
-      filterValues.push(value)  //-
-    }})})
-
-checkbox[0].addEventListener("change",()=>{if(checkbox[0].checked){priceOne()}})
-checkbox[1].addEventListener("change",()=>{if(checkbox[1].checked){priceTwo()}})
-checkbox[2].addEventListener("change",()=>{if(checkbox[2].checked){priceThree()}})
-checkbox[3].addEventListener("change",()=>{if(checkbox[3].checked){priceFour()}})
-*/
-
-// add to cart 
-
-
